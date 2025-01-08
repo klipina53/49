@@ -5,4 +5,10 @@
     <RootNamespace>_49_Lipina</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>
