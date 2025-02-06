@@ -43,7 +43,7 @@ namespace _49_Lipina
                     Title = "–уководство дл€ использовани€ запросов",
                     Description = "ѕолное руководство дл€ использовани€ запросов, наход€щихс€ в проекте"
                 });
-                var filePath = Path.Combine(System.AppContext.BaseDirectory, "pr49-RestApi_Pleshkova.StaticWebAssets.xml");
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "pr49-RestApi_Lipina.xml");
                 c.IncludeXmlComments(filePath);
             });
         }

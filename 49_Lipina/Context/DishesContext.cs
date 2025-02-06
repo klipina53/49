@@ -16,7 +16,7 @@ namespace _49_Lipina.Context
         {
             optionsBuilder.UseMySql("server=localhost;" +
                 "uid=root;" +
-                "port=3303;" +
+                "port=3306;" +
                 "pwd=;" +
                 "database=RestApi", new MySqlServerVersion(new Version(8, 0, 11)));
         }

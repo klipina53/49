@@ -23,23 +23,32 @@ namespace _49_Lipina.Controllers
         [ProducesResponseType(typeof(Orders), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(401)]
-        public ActionResult Order([FromForm] string token, [FromForm] string address, [FromForm] int DishId, [FromForm] int count)
+        public ActionResult AddOrder([FromForm] string Address, [FromForm] string Date, [FromForm] int DishId, [FromForm] int Count, [FromForm] string Token)
         {
-            if (!String.Equals(token, UsersController.token)) return StatusCode(401);
-
-            OrdersContext Context = new OrdersContext();
-
-            Orders orders = new Orders()
+            if (Address == null || Date == null || DishId == 0 || Count == 0 || Token == null) return StatusCode(400);
+            try
             {
-                Address = address,
-                Date = DateTime.Now.ToString(),
-                DishId = DishId,
-                Count = count
-            };
-
-            Context.Orders.Add(orders);
-            Context.SaveChanges();
-            return Json(orders);
+                var newOrder = new OrdersContext();
+                var findUserToken = new UsersContext();
+                if (findUserToken.Users.FirstOrDefault(x => x.Token == Token) == null) return StatusCode(400, "Такого токена нету!");
+                else
+                {
+                    Orders Order = new Orders()
+                    {
+                        Address = Address,
+                        Date = Date,
+                        DishId = DishId,
+                        Count = Count
+                    };
+                    newOrder.Orders.Add(Order);
+                    newOrder.SaveChanges();
+                    return Json(Order);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         /// <summary>

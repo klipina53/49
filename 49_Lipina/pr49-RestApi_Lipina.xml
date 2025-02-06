@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pr49-RestApi_Lipina</name>
+    </assembly>
+    <members>
+        <member name="M:_49_Lipina.Controllers.DishesController.ListVersion">
+            <summary>
+            Список версий
+            </summary>
+            <returns>Данный метод предназначен для получения списка версий</returns>
+            /// <response code="200">successful operation</response>
+            /// <response code="400">Проблемы при запросе</response>
+        </member>
+        <member name="M:_49_Lipina.Controllers.DishesController.Dishes(System.Int32)">
+            <summary>
+            Получить список блюд
+            </summary>
+            <param name="Version">Номер версии</param>
+            <response code="200">successful operation</response>
+            <response code="400">Проблемы при запросе</response>
+        </member>
+        <member name="M:_49_Lipina.Controllers.OrdersController.Order(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Метод для оформления заказа 
+            </summary>
+            <returns>Данный метод отправляет на сервер заказ</returns>
+            /// <response code="200">Заказ принят</response>
+            /// <response code="400">Проблемы при запросе</response>
+            /// <response code="401">Неавторизованный доступ</response>
+        </member>
+        <member name="M:_49_Lipina.Controllers.OrdersController.History">
+            <summary>
+            Метод для получения истории 
+            </summary>
+            <returns>Данный метод отправляет на сервер заказ</returns>
+            /// <response code="200">successful operation</response>
+            /// <response code="400">Проблема при запросе</response>
+        </member>
+        <member name="M:_49_Lipina.Controllers.UsersController.RegIn(System.String,System.String)">
+            <summary>
+            Регистрация
+            </summary>
+            <remarks>Данный метод предназначен для регистрации пользователя на сайте</remarks>
+            <response code="200">Успешная регистрация</response>
+            <response code="400">Проблемы при регистрации</response>
+        </member>
+        <member name="M:_49_Lipina.Controllers.UsersController.SignIn(System.String,System.String)">
+            <summary>
+            Авторизация
+            </summary>
+            <remarks>Данный метод предназначен для авторизации пользователя на сайте</remarks>
+            <response code="200">Успешная аутентификация</response>
+            <response code="400">Проблема аутентификации</response>
+            <response code="401">Пользователь не найден</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Dishes.Category" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Dishes.NameDish" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Dishes.Price" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Dishes.Icon" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Dishes.Version" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Orders.Address" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Users.Login" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Users.Password" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Users.Token" -->
+        <!-- Badly formed XML comment ignored for member "P:_49_Lipina.Models.Versions.Version" -->
+    </members>
+</doc>
